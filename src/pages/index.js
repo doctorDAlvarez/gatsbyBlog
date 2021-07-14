@@ -2,17 +2,30 @@
 import React, { useState } from 'react'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { FaSun } from 'react-icons/fa';
+import {WiMoonWaningCrescent5} from 'react-icons/wi'
+import Article from '../components/article';
+import resumeFile from '../images/Profile.pdf';
+
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: auto;
-    margin-top: 25px;
-    width: 600px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    max-width: 600px;
+    font-size: 1.1rem;
     box-sizing: border-box;
-    background-color: ${props => props.theme.dark ? "#132035" : "#dee8f7"};
-    color: ${props => props.theme.dark ? "antiquewhite" : "#494868"};;
+    background-color: ${props => props.theme.dark ? "#132035" : "#cbdefb"};
+    color: ${props => props.theme.dark ? "#e5fad7" : "#683982"};;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    transition: all .6s ease;
+    }
+    @media only screen and (max-width: 600px) {
+      body {
+        margin: 10vw;
+      }
+      
+    }
   }
 `;
 
@@ -31,12 +44,13 @@ const HeadStyle = styled.header`
 const AsideStyle = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   color: ${props => props.theme.dark ? "antiquewhite" : "#494868"};;
   word-wrap: break-word;
   font-kerning: normal;
+  transition: all .6s ease;
   a {
-    text-decoration: underline;
+    text-decoration: none;
     color: ${props => props.theme.dark ? "greenyellow" : "#ba55ad"};;
   }
   p {
@@ -51,6 +65,18 @@ const ProfileImgStyle = styled.img`
   width: 60px;
   height: 60px;
   border-radius: 50%;
+`;
+
+const LinkStyle = styled.div`
+  text-align: center;
+  margin-top: 80px;
+  h2 {
+    color: ${props => props.theme.dark ? "#e5fad7" : "#683982"};;
+  }
+  a {
+    text-decoration: none;
+
+  }
 `;
 
 
@@ -69,9 +95,8 @@ const IndexPage = () => {
         <GlobalStyle />
         <HeadStyle>
           <h1>neuroReact</h1>
-          <div>
-            <FaSun />
-            <input type="checkbox" onChange={e => handleThemeChange(theme)} />  
+          <div onClick={() => handleThemeChange(theme)}>
+            {theme.dark ? <FaSun /> : <WiMoonWaningCrescent5 />}
           </div>
         </HeadStyle>
         <aside>
@@ -86,7 +111,14 @@ const IndexPage = () => {
           </AsideStyle>
         </aside>
         <main>
-
+          <Article title="My Background" time="10min read ☕☕" content=""/>
+          <Article title="Experience" time="20min read ☕☕☕" content=""/>
+          <Article title="Skills" time="5min read ☕" content=""/>
+          <Article title="Education" time="12min read ☕☕" content=""/>
+          <LinkStyle>
+            <a href={resumeFile} download><h2>Resume</h2></a>
+          </LinkStyle>
+    
         </main>
         <footer>
 
