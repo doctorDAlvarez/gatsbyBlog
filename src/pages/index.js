@@ -1,6 +1,7 @@
 // Step 1: Import React
 import React, { useState } from 'react'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { FaSun } from 'react-icons/fa';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -20,6 +21,12 @@ const HeadStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  div {
+    display: flex;
+    align-items: center;
+  }  
+  }
+  
 `;
 const AsideStyle = styled.div`
   display: flex;
@@ -61,9 +68,10 @@ const IndexPage = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <HeadStyle>
-          <h1>Neuroreact</h1>
+          <h1>neuroReact</h1>
           <div>
-            <button onClick={e => handleThemeChange(theme)}>Mode</button>  
+            <FaSun />
+            <input type="checkbox" onChange={e => handleThemeChange(theme)} />  
           </div>
         </HeadStyle>
         <aside>
