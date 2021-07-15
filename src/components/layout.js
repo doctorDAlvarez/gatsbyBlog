@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.1rem;
     box-sizing: border-box;
     background-color: ${props => props.theme.dark ? "#132035" : "#cbdefb"};
-    color: ${props => props.theme.dark ? "#e5fad7" : "#243046"};;
+    color: ${props => props.theme.dark ? "#e5fad7" : "#4E446D"};;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all .6s ease;
     }
@@ -50,6 +50,9 @@ const FooterStyle = styled.footer`
     align-items: center;
     justify-content: space-around;
     padding: 10px;
+    a {
+        color: inherit;
+    }
 `;
 
 function Layout({children}) {
@@ -74,9 +77,9 @@ function Layout({children}) {
             </HeadStyle>
             {children}
             <FooterStyle>
-                <SiGithub />
-                <SiLinkedin />
-                <SiTwitter />
+                <Link to="https://www.github.com/doctordalvarez"><SiGithub /></Link>
+                <Link to="https://www.linkedin.com/in/doctordalvarez"><SiLinkedin /></Link>
+                <Link to="https://www.twitter.com/doctordalvarez"><SiTwitter /></Link>
             </FooterStyle>
         </ThemeProvider>
         </div>

@@ -17,7 +17,7 @@ const AsideStyle = styled.div`
   transition: all .6s ease;
   a {
     text-decoration: none;
-    color: ${props => props.theme.dark ? "lightgreen" : "#ba55ad"};;
+    color: ${props => props.theme.dark ? "lightgreen" : "#28acb4"};;
   }
   p {
     display: block;
@@ -37,7 +37,7 @@ const LinkStyle = styled.div`
   text-align: center;
   margin-top: 80px;
   h3 {
-    color: ${props => props.theme.dark ? "lightgreen" : "#683982"};;
+    color: ${props => props.theme.dark ? "lightgreen" : "lightcoral"};;
   }
   a {
     text-decoration: none;
@@ -64,13 +64,13 @@ const IndexPage = () => {
       </aside>
       <main>
         <Article title="Backyard" 
-        time="⚛️" 
+       
         content=""
         subheading="A little history about myself"  
         />
-        <Article title="Experience" time="⚛️" subheading="Projects"/>
-        <Article title="Open-source" time="⚛️" subheading="PR / Contributions"/>
-        <Article title="Education" time="⚛️" subheading="Learning path"/>
+        <Article title="Experience" subheading="Projects"/>
+        <Article title="Open-source" subheading="PR / Contributions"/>
+        <Article title="Education" subheading="Learning path"/>
         <LinkStyle>
           <a href={resumeFile} download><h3>Resume</h3></a>
         </LinkStyle>
