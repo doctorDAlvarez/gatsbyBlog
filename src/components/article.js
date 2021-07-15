@@ -8,9 +8,17 @@ const ArticleStyle = styled.div`
     h1, h6, h4, p {
         margin: 10px 0;
     }
-    #article {
-        letter-spacing: 0.3rem;
-        color: ${props => props.dark ? "#fad7e3" : "#494868"};
+    h1:hover {
+        color: ${props => props.theme.dark ? "lightpink" : "#a36fc0"};
+
+    }
+    h1 {
+        letter-spacing: 0.1rem;
+        color: ${props => props.theme.dark ? "#545b61" : "#243046"};
+    }
+    h4 {
+        color: ${props => props.theme.dark ? "inherit" : "gray"};
+
     }
     a {
         text-decoration: none;

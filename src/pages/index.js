@@ -17,7 +17,7 @@ const AsideStyle = styled.div`
   transition: all .6s ease;
   a {
     text-decoration: none;
-    color: ${props => props.theme.dark ? "greenyellow" : "#ba55ad"};;
+    color: ${props => props.theme.dark ? "lightgreen" : "#ba55ad"};;
   }
   p {
     display: block;
@@ -36,8 +36,8 @@ const ProfileImgStyle = styled.img`
 const LinkStyle = styled.div`
   text-align: center;
   margin-top: 80px;
-  h2 {
-    color: ${props => props.theme.dark ? "#e5fad7" : "#683982"};;
+  h3 {
+    color: ${props => props.theme.dark ? "lightgreen" : "#683982"};;
   }
   a {
     text-decoration: none;
@@ -63,20 +63,18 @@ const IndexPage = () => {
       </AsideStyle>
       </aside>
       <main>
-        <Article title="My Background" 
-        time="10min read ☕☕" 
+        <Article title="Backyard" 
+        time="⚛️" 
         content=""
         subheading="A little history about myself"  
         />
-        <Article title="Experience" time="20min read ☕☕☕" content=""/>
-        <Article title="Skills" time="5min read ☕" content=""/>
-        <Article title="Education" time="12min read ☕☕" content=""/>
-      </main>
-      <footer>
+        <Article title="Experience" time="⚛️" subheading="Projects"/>
+        <Article title="Open-source" time="⚛️" subheading="PR / Contributions"/>
+        <Article title="Education" time="⚛️" subheading="Learning path"/>
         <LinkStyle>
-        <a href={resumeFile} download><h2>Resume</h2></a>
+          <a href={resumeFile} download><h3>Resume</h3></a>
         </LinkStyle>
-      </footer>
+      </main>
     </Layout>
 
   </div>

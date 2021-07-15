@@ -3,6 +3,7 @@ import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { FaSun } from 'react-icons/fa';
 import {WiMoonWaningCrescent5} from 'react-icons/wi'
 import { Link } from 'gatsby';
+import {SiGithub, SiLinkedin, SiTwitter} from 'react-icons/si'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.1rem;
     box-sizing: border-box;
     background-color: ${props => props.theme.dark ? "#132035" : "#cbdefb"};
-    color: ${props => props.theme.dark ? "#e5fad7" : "#683982"};;
+    color: ${props => props.theme.dark ? "#e5fad7" : "#243046"};;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all .6s ease;
     }
@@ -42,6 +43,14 @@ const GlobalStyle = createGlobalStyle`
      }
     } 
 `;
+const FooterStyle = styled.footer`
+    margin: auto;
+    display: flex;
+    max-width: 10vw;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+`;
 
 function Layout({children}) {
     const [theme, setTheme] = useState({
@@ -64,6 +73,11 @@ function Layout({children}) {
                 </button>
             </HeadStyle>
             {children}
+            <FooterStyle>
+                <SiGithub />
+                <SiLinkedin />
+                <SiTwitter />
+            </FooterStyle>
         </ThemeProvider>
         </div>
     )
