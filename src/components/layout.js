@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     max-width: 600px;
     font-size: 1.1rem;
     box-sizing: border-box;
-    background-color: ${props => props.theme.dark ? "#132035" : "#cbdefb"};
+    background-color: ${props => props.theme.dark ? "#132035" : "#eff9ff"};
     color: ${props => props.theme.dark ? "#e5fad7" : "#4E446D"};;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all .6s ease;
@@ -53,6 +53,10 @@ const FooterStyle = styled.footer`
     a {
         color: inherit;
     }
+    svg {
+        padding: 10px;
+    }
+    }
 `;
 
 function Layout({children}) {
@@ -71,7 +75,7 @@ function Layout({children}) {
             <GlobalStyle />
             <HeadStyle>
                 <Link style={{color: 'inherit', textDecoration: 'none'}}to="/"><h1>neuroReact</h1></Link>
-                <button onKeydown={() => handleThemeChange(theme)} onClick={() => handleThemeChange(theme)}>
+                <button onKeyDown={() => handleThemeChange(theme)} onClick={() => handleThemeChange(theme)}>
                     {theme.dark ? <FaSun /> : <WiMoonWaningCrescent5 />}
                 </button>
             </HeadStyle>
