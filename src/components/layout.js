@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { FaSun } from 'react-icons/fa';
 import {WiMoonWaningCrescent5} from 'react-icons/wi'
 import { Link } from 'gatsby';
 import {SiGithub, SiLinkedin, SiTwitter} from 'react-icons/si'
-
+import VanillaTilt from 'vanilla-tilt';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -67,14 +67,26 @@ function Layout({children}) {
         const handleThemeChange = ({dark}) => {
         setTheme({dark: !dark});
         };
-    
+    const tiltRef = useRef()
+
+    useEffect(() => {
+        const tiltNode = tiltRef.current
+        VanillaTilt.init(tiltNode, {
+            max: 35,
+            speed: 200,
+            glare: 0,
+        })
+        return () => {
+            tiltNode.vanillaTilt.destroy()
+        }
+    }, [])
     
     return (
         <div>
         <ThemeProvider theme={theme}>
             <GlobalStyle />
-            <HeadStyle>
-                <Link style={{color: 'inherit', textDecoration: 'none'}}to="/"><h1>neuroReact</h1></Link>
+            <HeadStyle >
+                <Link  ref={tiltRef} style={{transition: 'ease .1ms', color: 'inherit', textDecoration: 'none',}}to="/"><h1>neuroReact</h1></Link>
                 <button onKeyDown={() => handleThemeChange(theme)} onClick={() => handleThemeChange(theme)}>
                     {theme.dark ? <FaSun /> : <WiMoonWaningCrescent5 />}
                 </button>
