@@ -2,7 +2,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import campus from '../../../../developer/campus.png'
 
 
 const ProjectStyle = styled.div`
