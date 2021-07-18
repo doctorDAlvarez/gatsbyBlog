@@ -45,6 +45,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 const FooterStyle = styled.footer`
     margin: auto;
+    margin-top: 100px;
     display: flex;
     max-width: 10vw;
     align-items: center;

@@ -5,7 +5,9 @@ import styled from 'styled-components'
 
 
 const ArticleStyle = styled.div`
-    margin-bottom: 75px;
+    margin-bottom: 45px;
+    padding: 20px;
+    min-width: 300px;
     
     h1, h6, h4, p {
         margin: 10px 0;
@@ -21,20 +23,16 @@ const ArticleStyle = styled.div`
     }
     h4 {
         color: ${props => props.theme.dark ? "lightcoral" : "gray"};
-
-    }
-    a {
-        text-decoration: none;
+        
     }
 `;
 
-function Article({title, content, subheading}) {
+function Article({title, subheading}) {
     return (
         <ArticleStyle>
-            <Link to="/background"> <h1 id="article">{title}</h1></Link>
-            <SiReact />
+            <h1 id={`${title}`}>{title}</h1>
+            <SiReact style={{color: 'white'}}/>
             <h4>{subheading}</h4>
-            <p>{content}</p>
         </ArticleStyle>
     )
 }

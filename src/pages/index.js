@@ -1,4 +1,4 @@
-// Step 1: Import React
+import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components';
 import Article from '../components/article';
@@ -44,10 +44,20 @@ const LinkStyle = styled.div`
 
   }
 `;
+const MainStyle = styled.main`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  a {
+    text-decoration: none;
+  }
+`;
 
 
 const IndexPage = () => {
-
+  
   return (
   <div>
     <Layout>
@@ -55,26 +65,22 @@ const IndexPage = () => {
       <AsideStyle>
         <ProfileImgStyle src="https://pbs.twimg.com/profile_images/1389558491245944835/7V71O-cX_400x400.jpg" alt="profile"></ProfileImgStyle>
         <p style={{display: 'block', marginLeft: 17}}>
-          Work and Ideas by <a href="https://www.twitter.com/doctordalvarez">@Diego Alvarez
+          Shared code and ideas by <a href="https://www.twitter.com/doctordalvarez">@Diego Alvarez
           </a>
           .
-          <br></br>Developer and Lover of React.
+          <br></br>Developer in love with React.
         </p>
       </AsideStyle>
       </aside>
-      <main>
-        <Article title="Backyard" 
-       
-        content=""
-        subheading="A little history about myself"  
-        />
-        <Article title="Experience" subheading="Projects"/>
-        <Article title="Open-source" subheading="PR / Contributions"/>
-        <Article title="Education" subheading="Learning path"/>
-        <LinkStyle>
+      <MainStyle>
+        <a href='https://gist.github.com/doctorDAlvarez'><Article title="customHooks" subheading="explore my gist repo"/></a>
+        <Link to='/projects'> <Article title="pastWork" subheading="see my 🎖 projects"/> </Link>
+        <Article title="openSource" subheading="pr / contributions"/>
+
+      </MainStyle>
+      <LinkStyle>
           <a href={resumeFile} download><h3>Resume</h3></a>
         </LinkStyle>
-      </main>
     </Layout>
 
   </div>

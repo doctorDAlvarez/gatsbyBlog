@@ -1,14 +1,16 @@
-// Step 1: Import React
+
 import React from 'react'
 import Layout from '../components/layout';
 
 
-const Background = () => {
+const Education = () => {
 
   return (
     <div>
     <Layout>
-
+      <article>
+        
+      </article>
     </Layout>
 
     </div>
@@ -16,5 +18,4 @@ const Background = () => {
   )
 }
 
-// Step 3: Export your component
-export default Background
+export default Education
