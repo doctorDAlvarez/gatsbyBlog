@@ -73,9 +73,9 @@ const IndexPage = () => {
       </AsideStyle>
       </aside>
       <MainStyle>
-        <a href='https://gist.github.com/doctorDAlvarez'><Article title="customHooks" subheading="explore my gist repo"/></a>
+        <Link to='/gists'><Article title="customHooks" subheading="explore my gist repo"/></Link>
         <Link to='/projects'> <Article title="pastWork" subheading="see my 🎖 projects"/> </Link>
-        <Article title="openSource" subheading="pr / contributions"/>
+        <Link to='/opensource'><Article title="openSource" subheading="pr / contributions"/></Link>
 
       </MainStyle>
       <LinkStyle>

@@ -57,7 +57,6 @@ const FooterStyle = styled.footer`
     svg {
         padding: 10px;
     }
-    }
 `;
 
 function Layout({children}) {
