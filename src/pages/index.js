@@ -68,13 +68,14 @@ const IndexPage = () => {
           Shared code and ideas by <a href="https://www.twitter.com/doctordalvarez">@Diego Alvarez
           </a>
           .
-          <br></br>Developer in love with React.
+          <br></br>Developer, love React.
         </p>
       </AsideStyle>
       </aside>
       <MainStyle>
-        <Link to='/gists'><Article title="customHooks" subheading="explore my gist repo"/></Link>
-        <Link to='/projects'> <Article title="pastWork" subheading="see my 🎖 projects"/> </Link>
+        <Link to='/gists'><Article title="Code" subheading="custom hooks"/></Link>
+        <Link to='/projects'> <Article title="Experience" subheading="🎖 projects"/> </Link>
+        <Link to='/opensource'><Article title="Blog" subheading="soft-skills"/></Link>
         <Link to='/opensource'><Article title="openSource" subheading="pr / contributions"/></Link>
 
       </MainStyle>
