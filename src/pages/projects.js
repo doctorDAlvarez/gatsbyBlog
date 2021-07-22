@@ -9,7 +9,7 @@ const ProjectStyle = styled.div`
   flex-direction: column;
   font-family: 'Courier New', Courier, monospace;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
   border: 1px solid grey;
   margin: 15px;
@@ -18,7 +18,11 @@ const ProjectStyle = styled.div`
   transition: ease-in-out 2ms all;
   :hover {
     box-shadow: 0 0 2px 2px greenyellow;
-    color: white;
+
+  }
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.dark ? "white" : "#28acb4"};
   }
 `;
 
@@ -29,11 +33,13 @@ const Projects = () => {
     <div>
     <Layout>
       <ProjectStyle>
+      <a href="https://github.com/doctorDAlvarez/campus-App">
         <h3>Campus Online</h3>
         <p>Built with React Hooks.</p>
         <ul>
-          <li>Authentication state mgmt - useAuth</li>
-          <li>Context API - useContext</li>
+          <li>State Mgmt</li>
+          <li>Authentication</li>
+          <li>Context API</li>
           <li>Async/await API data handling</li>
           <li>js-cookie</li>
           <li>react-router / dom API</li>
@@ -42,19 +48,57 @@ const Projects = () => {
           <li>CRUD operations / sequelize ORM</li>
           <li>ErrorBoundary API</li>
           <li>Testing: jest/user-event/react</li>
+          <li>Full Stack App</li>
         </ul>
+      </a>
       </ProjectStyle>
       <ProjectStyle>
-        <h3>Robotic Search App</h3>
+      <a href="https://cool-portfolio-d9hwmca4a-doctordalvarez.vercel.app/">
+        <h3>Client Portfolio</h3>
         <p>Built with React.</p>
         <ul>
-          <li>Search feature</li>
-          <li>Fetch API</li>
-          <li>Functional programming</li>
-          <li>Conditional Rendering</li>
+          <li>Styled Components</li>
+          <li>Hooks patterns</li>
+          <li>Context API</li>
+          <li>HTML5/CSS3</li>
+          <li>Responsive design</li>
+        </ul>
+      </a>
+      </ProjectStyle>
+      <ProjectStyle>
+      <a href="https://react-directory-ogj2wlsa8-doctordalvarez.vercel.app/">
+        <h3>React Directory</h3>
+        <p>Built with React.</p>
+        <ul>
           <li>Basic State mgmt</li>
           <li>Class components</li>
+          <li>Functional programming</li>
+          <li>Conditional Rendering</li>
+          <li>Refs</li>
         </ul>
+      </a>
+      </ProjectStyle>
+      <ProjectStyle>
+      <a href="https://gallery-app-chi.vercel.app/">
+        <h3>Gallery</h3>
+        <p>Built with React.</p>
+        <ul>
+          <li>Hooks pattern and design</li>
+          <li>Dynamic Search feature</li>
+          <li>Fetch API, Async programming</li>
+        </ul>
+      </a>
+      </ProjectStyle>
+      <ProjectStyle>
+      <a href="https://github.com/doctorDAlvarez/neuroreactv2theme">
+        <h3>Personal Custom VS Code Theme</h3>
+        <p>Based in Night Owl</p>
+        <ul>
+          <li>Customized colors using token based configuration</li>
+          <li>Cool theme for my personal use</li>
+          <li>Feel free to send me tips</li>
+        </ul>
+      </a>
       </ProjectStyle>
     </Layout>
 

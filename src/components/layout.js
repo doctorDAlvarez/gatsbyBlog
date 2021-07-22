@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     max-width: 600px;
     font-size: 1.1rem;
     box-sizing: border-box;
-    background-color: ${props => props.theme.dark ? "#132035" : "#eff9ff"};
+    background-color: ${props => props.theme.dark ? "#30394C" : "#eff9ff"};
     color: ${props => props.theme.dark ? "#e5fad7" : "#4E446D"};;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all .6s ease;

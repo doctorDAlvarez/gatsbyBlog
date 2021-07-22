@@ -68,7 +68,7 @@ const IndexPage = () => {
           Shared code and ideas by <a href="https://www.twitter.com/doctordalvarez">@Diego Alvarez
           </a>
           .
-          <br></br>Developer, love React.
+          <br></br>Developer. Building cool stuff.    
         </p>
       </AsideStyle>
       </aside>

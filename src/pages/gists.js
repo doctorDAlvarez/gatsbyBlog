@@ -9,7 +9,7 @@ const GistStyle = styled.div`
   margin: auto;
   font-family: monospace;
   box-sizing: border-box;
-  color: white;
+  color: ${props => props.theme.dark ? "white" : "#28acb4"};
   button {
     font-family: monospace;
     border-radius: 10px;
@@ -17,7 +17,7 @@ const GistStyle = styled.div`
     margin-bottom: 20px;
     cursor: pointer;
     padding: 5px 20px;
-    background-color: darkorchid;
+    background-color: ${props => props.theme.dark ? "darkorchid" : "#4E446D"};
     color: white;
     border: transparent;
     :hover {
