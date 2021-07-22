@@ -68,15 +68,15 @@ const IndexPage = () => {
           Shared code and ideas by <a href="https://www.twitter.com/doctordalvarez">@Diego Alvarez
           </a>
           .
-          <br></br>Developer. Building cool stuff.    
+          <br></br>Developer, <i>thinking</i> in React.    
         </p>
       </AsideStyle>
       </aside>
       <MainStyle>
         <Link to='/gists'><Article title="Code" subheading="custom hooks"/></Link>
         <Link to='/projects'> <Article title="Experience" subheading="🎖 projects"/> </Link>
-        <Link to='/opensource'><Article title="Blog" subheading="soft-skills"/></Link>
-        <Link to='/opensource'><Article title="openSource" subheading="pr / contributions"/></Link>
+        <a href='https://doctordalvarez.hashnode.dev/'><Article title="Blog" subheading="soft-skills"/></a>
+        <a href='https://gist.github.com/doctorDAlvarez'><Article title="openSource" subheading="pr / contributions"/></a>
 
       </MainStyle>
       <LinkStyle>

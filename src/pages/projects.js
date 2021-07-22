@@ -5,6 +5,11 @@ import Layout from '../components/layout';
 
 
 const ProjectStyle = styled.div`
+  --initialTextColor: #FFF;
+  --slideTextColor: #272838;
+
+  --initialBgColor: transparent;
+  --slideBgColor: #272838;
   display: flex;
   flex-direction: column;
   font-family: 'Courier New', Courier, monospace;
@@ -15,10 +20,24 @@ const ProjectStyle = styled.div`
   margin: 15px;
   margin-top: 50px;
   padding: 50px;
-  transition: ease-in-out 2ms all;
-  :hover {
-    box-shadow: 0 0 2px 2px greenyellow;
+  /* transition: ease-in-out 2ms all; */
+  color: var(--initialTextColor);
+  background-image: linear-gradient(90deg,
+      var(--initialBgColor) 0%,
+      var(--initialBgColor) 50%,
+      var(--slideBgColor) 50%,
+      var(--slideBgColor) 100%);
+  background-size: 200%;
+  transition: background-position .2s cubic-bezier(.47, .1, 1, .63),
+    color .2s linear;
+  transition-delay: 0.0s, 0.15s;
+  
 
+  :hover {
+    box-shadow: ${props => props.theme.dark ? "0 0 1px 1px greenyellow" : "0 0 1px 1px lightpink"}; 
+    color: var(--slideTextColor);
+    cursor: pointer;
+    background-position: -100% 100%;
   }
   a {
     text-decoration: none;
