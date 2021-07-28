@@ -73,8 +73,8 @@ const IndexPage = () => {
       </AsideStyle>
       </aside>
       <MainStyle>
-        <Link to='/gists'><Article title="Code" subheading="custom hooks"/></Link>
-        <Link to='/projects'> <Article title="Experience" subheading="🎖 projects"/> </Link>
+        <Link to='/gists'><Article title="<Code />" subheading="custom hooks"/></Link>
+        <Link to='/projects'> <Article title="<Work />" subheading="🎖 projects"/> </Link>
         <a href='https://doctordalvarez.hashnode.dev/'><Article title="Blog" subheading="soft-skills"/></a>
         <a href='https://gist.github.com/doctorDAlvarez'><Article title="openSource" subheading="pr / contributions"/></a>
 
