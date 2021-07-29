@@ -45,19 +45,22 @@ const Gists = () => {
 }
   const gists = [
     'b6e25c8deb86003d85518b16236aa912',
-    '4b05d4e7279fdad69cc10ad784b538da',
-    'b22a4733d8ba3fc2028d4e4f5bd3104e'
+    'b22a4733d8ba3fc2028d4e4f5bd3104e',
+    '89013a2f2575fcebfbfa4449cb726332'
   ]
   const content = [
     {
       title: 'useAsync', 
-      desc: 'custom hook to manage async operations, while keeping unmounted request safe'},
-    {
-      title: 'useProvideAuth', 
-      desc: 'manage authentication and handle cookies'},
+      desc: 'custom hook to manage async operations, while keeping unmounted request safe'
+    },
     {
       title: 'useLocalStorage', 
-      desc: 'localStorage API simple mgmt'}
+      desc: 'localStorage API simple mgmt'
+    },
+    {
+      title: 'useInterval, by @dan_abramov',
+      desc: 'cool custom hook to handle intervals efficiently, imperative => declarative approach'
+    }
   ]
 
   return (
