@@ -4,11 +4,12 @@ import styled from "styled-components";
 import Article from "../components/article";
 import Layout from "../components/layout";
 import resumeFile from "../images/Profile.pdf";
+import profileimg from "../images/profileimg.jpeg";
 
 const AsideStyle = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   color: ${(props) => (props.theme.dark ? "antiquewhite" : "#494868")};
   word-wrap: break-word;
   font-kerning: normal;
@@ -20,15 +21,15 @@ const AsideStyle = styled.div`
   }
   p {
     display: block;
-    margin-top: 10px;
+    margin-top: 2px;
     max-width: 300px;
     line-height: 25px;
   }
 `;
 
 const ProfileImgStyle = styled.img`
-  width: 70px;
-  height: 70px;
+  width: 10%;
+  height: 12%;
   border-radius: 50%;
 `;
 
@@ -59,10 +60,7 @@ const IndexPage = () => {
       <Layout>
         <aside>
           <AsideStyle>
-            <ProfileImgStyle
-              src="https://pbs.twimg.com/profile_images/1389558491245944835/7V71O-cX_400x400.jpg"
-              alt="profile"
-            ></ProfileImgStyle>
+            <ProfileImgStyle src={profileimg} alt="profile"></ProfileImgStyle>
             <p style={{ display: "block", marginLeft: 17 }}>
               Shared code and ideas by{" "}
               <a href="https://www.twitter.com/doctordalvarez">
