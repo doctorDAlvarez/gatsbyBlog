@@ -28,9 +28,8 @@ const AsideStyle = styled.div`
 `;
 
 const ProfileImgStyle = styled.img`
-  width: 65px;
-  height: 55px;
-  border-radius: 50%;
+  border-radius: 20%;
+  width: 100px;
 `;
 
 const LinkStyle = styled.div`
