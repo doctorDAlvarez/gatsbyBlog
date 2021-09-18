@@ -1,4 +1,3 @@
-import { relativeTimeRounding } from "moment";
 import React from "react";
 import Layout from "../components/layout";
 import video from "../images/screen.mp4";

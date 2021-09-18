@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { FaSun } from "react-icons/fa";
 import { WiMoonWaningCrescent5 } from "react-icons/wi";
@@ -67,10 +67,9 @@ function Layout({ children }) {
     dark: true,
   });
 
-  const handleThemeChange = ({ theme }) => {
-    setTheme({ dark: !theme });
+  const handleThemeChange = ({ dark }) => {
+    setTheme({ dark: !dark });
   };
-  const tiltRef = useRef();
 
   //   useEffect(() => {
   //     const tiltNode = tiltRef.current;
@@ -90,7 +89,6 @@ function Layout({ children }) {
         <GlobalStyle />
         <HeadStyle>
           <Link
-            ref={tiltRef}
             style={{
               transition: "ease .1ms",
               color: "inherit",
@@ -101,6 +99,7 @@ function Layout({ children }) {
             <h1>neuroReact</h1>
           </Link>
           <button
+            style={{ cursor: "pointer" }}
             onKeyDown={() => handleThemeChange(theme)}
             onClick={() => handleThemeChange(theme)}
           >
@@ -109,15 +108,15 @@ function Layout({ children }) {
         </HeadStyle>
         {children}
         <FooterStyle>
-          <Link to="https://www.github.com/doctordalvarez">
+          <a href="https://www.github.com/doctordalvarez">
             <SiGithub />
-          </Link>
-          <Link to="https://www.linkedin.com/in/doctordalvarez">
+          </a>
+          <a href="https://www.linkedin.com/in/doctordalvarez">
             <SiLinkedin />
-          </Link>
-          <Link to="https://www.twitter.com/doctordalvarez">
+          </a>
+          <a href="https://www.twitter.com/doctordalvarez">
             <SiTwitter />
-          </Link>
+          </a>
         </FooterStyle>
       </ThemeProvider>
     </div>
