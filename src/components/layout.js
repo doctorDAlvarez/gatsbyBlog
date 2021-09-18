@@ -4,11 +4,9 @@ import { FaSun } from "react-icons/fa";
 import { WiMoonWaningCrescent5 } from "react-icons/wi";
 import { Link } from "gatsby";
 import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
-import VanillaTilt from "vanilla-tilt";
 
 const GlobalStyle = createGlobalStyle`
   body {
-      zoom: 130%;
     margin: auto;
     margin-top: 70px;
     margin-bottom: 50px;
@@ -20,10 +18,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all .6s ease;
     }
-    @media only screen and (max-width: 600px) {
+
+    a {
+      max-width: 100%;
+    }
+    @media only screen and (max-width: 700px) {
       body {
-        margin: 10vw;
-      } 
+        font-size: 1.4em;
+      }
     }
  `;
 
@@ -65,8 +67,8 @@ function Layout({ children }) {
     dark: true,
   });
 
-  const handleThemeChange = ({ dark }) => {
-    setTheme({ dark: !dark });
+  const handleThemeChange = ({ theme }) => {
+    setTheme({ dark: !theme });
   };
   const tiltRef = useRef();
 

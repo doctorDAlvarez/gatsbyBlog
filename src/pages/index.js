@@ -9,6 +9,7 @@ import profileimg from "../images/profileimg.jpeg";
 const AsideStyle = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 3rem;
   color: ${(props) => (props.theme.dark ? "antiquewhite" : "#494868")};
   word-wrap: break-word;
@@ -25,12 +26,21 @@ const AsideStyle = styled.div`
     max-width: 300px;
     line-height: 25px;
   }
+
+  @media screen and (max-width: 760px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    p {
+      max-width: 100%;
+    }
+  }
 `;
 
 const ProfileImgStyle = styled.img`
-  width: 65px;
-  height: 55px;
-  border-radius: 50%;
+  border-radius: 100px;
+  width: 100px;
 `;
 
 const LinkStyle = styled.div`
@@ -45,22 +55,27 @@ const LinkStyle = styled.div`
 `;
 const MainStyle = styled.main`
   display: flex;
+  width: 100%;
   align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 2em;
   a {
     text-decoration: none;
+    width: 100%;
   }
 `;
 
 const IndexPage = () => {
   return (
-    <div>
+    <div style={{ margin: 30 }}>
       <Layout>
         <aside>
           <AsideStyle>
-            <ProfileImgStyle src={profileimg} alt="profile"></ProfileImgStyle>
+            <div>
+              <ProfileImgStyle src={profileimg} alt="profile"></ProfileImgStyle>
+            </div>
             <p style={{ display: "block", marginLeft: 17 }}>
               Shared code and ideas by{" "}
               <a href="https://www.twitter.com/doctordalvarez">
